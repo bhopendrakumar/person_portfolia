@@ -1,0 +1,86 @@
+header
+{
+    height: 100vh;
+    padding-top: 3rem;
+    overflow: hidden;
+}
+.header_conatiner
+{
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+
+/* =============cta/button=========== */
+
+.cta{
+  margin-top: 2.5rem;
+  display: flex;
+  gap:1.2rem;
+  justify-content: center;
+}
+
+/* =============headerIcons=========== */
+
+.header_socials
+{ 
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 10rem;
+    bottom: 3rem;
+    gap: 0.8rem;
+    align-items: center;
+}
+.header_socials::after{
+   content: "";
+   width: 1px;
+   height: 2rem;
+   background-color: var(--color_primary);
+}
+/* =============header image=========== */
+.me
+{
+    background: linear-gradient(var( --color_primary),transparent);
+    width: 16rem;
+    height: 25rem;
+    position: absolute;
+    /* for make the image on center */
+    left:calc(50% - 8rem);
+    border-radius: 12rem 12rem 0 0;
+    margin-top: 2rem;
+    overflow: hidden;
+    padding:5rem 1.5rem 1.5rem 1.5rem;
+}
+/* =============sroll down=========== */
+
+.scroll_down
+{
+    position: absolute;
+    right:5rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+/* ========================= MEDIA QUERY (MIDIUM DEVICES) ========================== */
+/* read about it */
+@media screen and (max-width :1024px) {
+    header{
+        height: 68vh;
+       
+    }
+    
+}
+/* ========================= MEDIA QUERY (Mobile DEVICES) ========================== */
+/* read about it */
+@media screen and (max-width :600px) {
+    header{
+        height: 100vh;
+    }
+    .header_socials,.scroll_down
+    {
+        display: none;
+    }
+}
